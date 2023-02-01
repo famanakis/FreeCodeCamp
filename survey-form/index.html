@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+  <html lang="en">
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h1 id="title" class="box"> 2019 Copper Creek Camp Survey</h1>
+  <p><img src="https://i.postimg.cc/jdQ6GKd4/camp-tent.png" style="display:block; margin:0 auto" alt="camper"></p>
+  <h2 class="box"> To help us improve next year's camp, please tell us about your experience</h2>
+
+  <form id="survey-form">
+    <div class="card">
+      <label id="name-label" for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="First and Last Name" required/>
+    </div>
+    
+    <div class="card">
+      <label id="email-label" for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Email" required/> 
+    </div>
+
+    <div class="card">
+      <label id="age-label" for="number">Age</label>
+        <input type="number" name="number" id="number" min="13" max="18" placeholder="Age" required/>
+    </div>
+
+    <div class="card">
+      <p>Cabin Assignment</p>
+      <select id="dropdown" name="cabin" required>
+        <option value="Bison"> Bison</option>
+        <option value="Chipmunk"> Chipmunk</option>
+        <option value="Eagle"> Eagle</option>
+        <option value="Fox"> Fox</option>
+        <option value="Otter"> Otter</option>
+        <option value="Raccoon"> Raccoon</option>
+        <option value="Wolf"> Wolf</option>  
+      </select>
+    </div>
+
+    <div class="card">
+      <p id="description">Overall, what did you think of the camp?</p>
+      <div class="list">
+        <label>
+          <input class="selector" type="radio" name="satisfaction" value="Extremely Satisfied"/>Extremely Satisfied</label>
+        <label>
+          <input class="selector" type="radio" name="satisfaction"value="Very Satisfied"/>Very Satisfied</label>
+        <label>
+          <input class="selector" type="radio" name="satisfaction" value="Somewhat Satisfied"/>Somewhat Satisfied</label>    
+        <label>
+          <input class="selector" type="radio" name="satisfaction" value="Not Satisfied"/>Not Satisfied</label>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>What was your favorite activity at camp?</p>
+      <select name="favorite activity" id="dropdown" class="form-control">
+        <option value="Arts and Crafts">Arts and Crafts</option>
+        <option value="Cabin Team Activities">Cabin Team Activities</option>
+        <option value="Open Swim">Open Swim</option>
+        <option value="Sports Classes">Sports Classes</option>
+        <option value="STEM Classes">STEM Classes</option>
+        <option value="Talent Show">Talent Show</option>
+      </select>
+    </div>
+      
+    <div class="card">
+      <p>What was your least favorite activity?</p>
+      <select name="least favorite" id="dropdown" class="form-control">
+        <option value="Arts and Crafts"> Arts and Crafts</option>
+        <option value="Cabin Team Activities"> Cabin Team Activities</option>
+        <option value="Open Swim"> Open Swim</option>
+        <option value="Sports Classes"> Sports Classes</option>
+        <option value="STEM Classes"> STEM Classes</option>
+        <option value="Talent Show"> Talent Show</option>
+      </select>
+    </div>
+  
+    <div class="card">  
+      <p>What would you like to see improved?</p>
+      <div class="list">
+        <label for="free time">
+          <input class="selector" type="Checkbox" id="improvement" name="free time" value="improvement">More Free Time</label>
+        <label for="arts and crafts">
+          <input class="selector" type="Checkbox" id="improvement" name="arts and crafts" value="improvement">More Arts and Crafts</label>
+        <label for="cabin team activities">
+          <input class="selector" type="Checkbox" id="improvement" name="cabin team activities" value="improvement">More Cabin Team Activities</label>
+        <label for="STEM Classes">
+          <input class="selector" type="Checkbox" id="improvement" name="STEM classes" value="improvement">More STEM Classes</label>
+        <label for="open swim time">
+          <input class="selector" type="Checkbox" id="improvement" name="open swim" value="improvement">More Open Swim Time</label>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>Would you recommend Copper Creek Camp?</p>
+      <div class="list">
+        <label> 
+          <input class="selector" type="radio" id="Yes" name="recommend" value="Yes"/>Yes</label><br>
+        <label>
+          <input class="selector" type="radio" id="Maybe" name="recommend" value="Maybe"/>Maybe</label><br>
+        <label>
+          <input class="selector" type="radio" id="No" name="recommend" value="No"/>No</label>
+      </div>    
+    </div>
+
+    <div class="card">
+      <p>Any comments or suggestions?</p>
+      <textarea name="comments" id="comments"></textarea><br><br>
+      <input class="Submitbutton" type="submit" id="submit" value="Submit"/>  
+    </div>
+  </form>
+  
+</body>
+</html>

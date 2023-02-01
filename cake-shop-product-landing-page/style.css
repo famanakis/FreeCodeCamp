@@ -1,0 +1,199 @@
+body {
+  background-color:rgb(235,125,149);
+  margin: 0;
+  padding-top: 0px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sand-serif;
+  font-size: 20px;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fafeff;
+  padding: 5px 25px;
+  margin-bottom: 5%;
+}
+
+.shop-name-logo {
+  display: flex;
+  gap: 20px;
+}
+
+.cupcake-small {
+  width: 50px;
+  height: 50px;  
+  padding-top: 12px;
+}
+
+h1 {
+  font-size: 55px;
+  background-color:#fafeff;
+  color:#780404;
+  text-shadow: 0 0 1px black;
+  font-weight:bold;
+  margin: 0 auto;
+}
+
+p {
+  margin-bottom: 25px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-link {
+  font-size:20px;
+  text-decoration:none;
+  color:#ff0095;
+  padding-left: 15px;
+} 
+  
+#nav-bar a:hover {
+  font-size:20px;
+  color:#780404;
+  font-weight:bold;  
+  border-radius:10px;
+}
+
+.container {
+  background-color:#fafeff;;
+  margin: 0 auto;
+  width: 50%;
+  border-radius: 5px;
+  text-align: center; 
+  padding: 5px 150px 25px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+iframe {
+  width: 100%;
+}
+
+.swirl {
+  width: 30%;
+  height: 30%;
+  padding: 10px;
+  border-radius: 50px;
+  
+}
+
+.cupcake-video {
+  display: flex;
+  margin-left:auto;
+  margin-right:auto;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  border:none;
+  }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.email {
+  border-radius: 5px; 
+  text-align: center;
+  padding: 6px 70px;
+}
+
+.submit-btn {
+  border: none;
+  background:#780404;
+  color: white;
+  border-radius: 5px;
+  text-align:center;
+  padding: 8px 18px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background:#ff0095;
+}
+
+footer {
+  text-align:center;
+  color: white;
+  text-shadow: 0 0 2px black;
+}
+
+footer > h3 {
+  margin-bottom: 10px;
+}
+
+footer > h4 {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 1200px) and (min-width:480px)
+{ 
+  body,
+  .container {
+    background-color:#ffc9e9;
+  }
+
+  .cupcake-small,
+  .swirl {
+    visibility: hidden;
+  }
+
+  .small {
+    margin-top: -65px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 12px;
+  }
+
+  .cupcake-video {
+    padding-top: 45px;
+  }
+
+  .video-div {
+    font-size: 16px;
+  }
+
+  .small > h2 {
+    margin-bottom: 0;
+  }
+
+  .small > p {
+    font-size: 16px;
+  }
+
+  footer {
+    font-size: small;
+    color: black;
+    text-shadow: none;
+    padding-bottom: 30px;
+  }
+
+  footer > h3 {
+    margin-bottom: 5px;
+  }
+
+  footer > h4 {
+    margin-top: 0;
+  }
+
+}

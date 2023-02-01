@@ -1,0 +1,55 @@
+body { 
+  background-color: rgba(102,255,255,.35);
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; 
+  text-align:center;
+}
+
+h1 {  
+  font-size: 50px;
+  margin-bottom: -25px;
+}
+
+p {
+  font-size: 20px;
+  font-weight:bold;
+}
+
+.caption {
+  font-weight:100;
+  color: #2a2727;
+}
+
+div { 
+  font-size: 15px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+ul {
+  list-style: inside;
+}
+
+h3 {
+  font-size: 25px; 
+}
+
+footer {
+  font-size: 13px;
+  padding: 15px;
+}
+
+.footer-text {
+  font-size: 12px;
+  font-weight:lighter;
+  color: #2a2727;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}

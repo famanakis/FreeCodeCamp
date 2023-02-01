@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<head>
+  <html lang="en" >
+  <meta charset="UTF-8">
+  <title>Web User Accessibility Documentation</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <header>Web User<br>Accessibility<br>Documentation</header><br>
+    <ul>
+      <li><a class="nav-link" href="#Overview" >Overview</a></li>
+      <li><a class="nav-link" href="#Prerequisites">Prerequisites</a></li>
+      <li><a class="nav-link" href="#Accessibility_Defined" >Accessibility Defined</a></li>
+      <li><a class="nav-link" href="#Disabilities_and_Technology" >Disabilities and Technology</a></li>
+      <li><a class="nav-link" href="#Implementing_Accessibility">Implementing Accessibility</a></li>
+      <li><a class="nav-link" href="#Legal_Guidelines">Legal Guidelines</a></li>
+      <li><a class="nav-link" href="#Accessibility_APIs">Accessibility APIs</a></li>   
+      <li><a class="nav-link" href="#References">References</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc"><br>
+  
+    <section class="main-section" id="Overview">
+      <header>Overview</header>
+      <p>Accessibility includes what groups of people we need to consider and why, what tools different people use to interact with the web, and how we can make accessibility part of our web development workflow.</p>  
+    </section>  
+    
+    <section class="main-section" id="Prerequisites">
+      <header>Prerequisites</header>
+      <p>What you should already know</p>
+      <ul>
+        <li>Basic computer literacy</li>
+        <li>Basic understanding of HTML</li>
+        <li>Basic understanding of CSS</li>
+      </ul>
+    </section>  
+
+    <section class="main-section" id="Accessibility_Defined">
+      <header>Accessibility Defined</header>
+      <p>Accessibility is the practice of making websites usable by as many people as possible. Accessibility is treating everyone the same, and giving them equal opportunities. Just as it is wrong to exclude someone from a physical building because they are in a wheelchair (modern public buildings generally have wheelchair ramps or elevators), it is also not right to exclude someone from a website because they have a visual impairment. Providing accessible sites is part of front end web development and is the law in some countries.</p>
+    </section>  
+    
+    <section class="main-section" id="Disabilities_and_Technology">
+      <header>Disabilities and Technology</header>
+      <p>People with disabilities are just as diverse as people without disabilities, and so are their disabilities. Disabilities can make it so that users with disabilities use computers and the web differently than others. The main types of disability impairments to consider when designing web accessibility are: 
+        <ul>
+          <li>Visual Impairments</li>
+          <li>Hearing Impairments</li>
+          <li>Mobility Impairments</li>
+          <li>Cognitive Impairments</li>
+        </ul>
+      </p>
+      <p>People with visual impairments include people with blindness, low-level vision, and color blindness. Many people with visual impairments use screen magnifiers that are either physical magnifiers or software zoom capabilities. Most browsers and operating systems have zoom capabilities. Some users will rely on screen readers, which is software that reads digital text aloud. Familiarizing yourself with screen readers (what they are, different types of readers, and how they work) will help you when it is time to build accessibility into your websites.<p>
+      <p>People with hearing impairments, or otherwise known as people with auditory impairments or deaf people, have either low hearing levels or no hearing at all. Hearing-impaired people use ATs (see Assistive Devices for People with Hearing, Voice, Speech, or Language Disorders), but they are not designed for computer/web use. There are specific techniques for providing textual alternatives to audio content.  These techniques range from simple text transcripts to text tracks (i.e., captions) that can be displayed along with video.</p>
+      <p>People with mobility impairments have disabilities concerning movement, which might involve purely physical issues (such as loss of limb or paralysis), or neurological/genetic disorders that lead to weakness or loss of control in limbs. Some people might have difficulty making the exact hand movements required to use a mouse, while others might be more severely affected, perhaps being significantly paralyzed to the point where they need to use a head pointer to interact with computers.   To make the web accessible for this population, controls for a site must be made accessible by the keyboard. For example, instead of using a mouse a use might use the Tab key to move between the different controls of a web form.</p>
+      <p>Cognitive impairment refers to a broad range of disabilities, from people with intellectual disabilities to all of us as we age and have difficulty thinking and remembering. The range includes people with mental illnesses, such as depression and schizophrenia. It also includes people with learning disabilities, such as dyslexia and attention deficit hyperactivity disorder. People with clinical definitions of cognitive impairments often experience a common set of functional problems. These include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent webpage layouts.</p>
+      <p>Statistics</p>
+      <p>Visually impaired people include more than 285 million people (39 million are blind and 246 have low vision) across the world according to the World Health Organization.</p>
+      <p>More than 466 million people across the world are considered to be hearing impaired, according to the World Health Organization.</p>
+      <p>In the United States, it is estimated by the US Center for Disease Control and Prevention, that 16.1% of the adult US population has a physical functioning disability.</p>
+      <p>These combined populations of users are larger than the size of the population of the United States of America.   This is a large and significant population of users that need accessibility coding built into your website in order to access the information you are trying to share.</p>
+    </section>  
+      
+    <section class="main-section" id="Implementing_Accessibility">
+      <header>Implementing Accessibility</header>
+      <p>Web page accessibility is implemented through code which is added to existing HTML documents.   While the code itself is not seen on the actual webpage, the code responds to user actions as requested to help users with disabilities understand the web page content. Following are examples of accessibility along with the respective code for user implementation.</p>
+      <p>Associating a Label with Every Form Control</p>
+      <p>Purpose: Associating a label with a form control ensures that assistive technology can refer to the correct label when presenting a form control. </p>
+      <p>How: Use a for attribute on the <<!--<-->label> element linked to the id attribute of the form element, or using WAI-ARIA attributes.<br><br>Code Example:<br>
+        <code>
+          <<!--<-->label for="username">Username<<!--<-->/label><<!--<-->input id="username" type="text" name="username">
+        </code>
+      </p>
+      <p>Including Alternative Text for Images</p><p>Purpose: Describes images to visitors who are unable to see the image. This includes screen readers, browsers that block images, and users who are sight-impaired.</p>
+      <p>How: Ensure that alternative text for images is added to all information and functional images.   Use empty alternative text, alt="" for decorative images, or include them in the CSS instead.<br><br>Code Example:<br>
+        <code> 
+          <<!--<-->img src="happy_cat" alt="cat smiling while being tickled" width="500" height="600">
+        </code>
+      </p>
+      <p>Help Users Avoid and Correct Mistakes</p><p>Purpose: Assists users in understanding where corrections need to be made. Code can be used to make format very forgiving when processing user input. For example, accept phone numbers that include spaces and delete the spaces as needed.</p>
+      <p>How: Helps provide clear instructions, error messages, and notifications to help users complete forms. When an error occurs, code helps users find where the problem is, suggest corrections, or provide specific and understandable explanations. <br><br>Code Example:<br>
+        <code>
+          <<!--<-->label for="phone">Phone<<!--<-->/label><br>
+          <<!--<-->input id="phone" name="phone" type="tel"
+          pattern="^(\(?0[1-9]{1}\)?)?[0-9 -]*$"
+          aria-describedby="phone-desc"><br>
+          <<!--<-->p id="phone-desc">For example, (02) 1234 1234<<!--<-->/p>
+        </code>
+      </p>      
+      <p>Ensure That All Interactive Elements are Keyboard Accessible.</p><p>Purpose: To make interactive elements, such as menus, mouseover information, collapsible  accordions, or media players accessible with a keyboard. </p>
+      <p>How: Use tabindex="0" to add an element that does not normally receive focus, such as <<!--<-->div> or <<!--<-->span>, into the navigation order when it is being used for interaction. Use scripting to capture and respond to keyboard events.<br><br>Code Example:<br>
+        <code> var buttonExample = document.getElementById('example-button');<br><br>
+          buttonExample.addEventListener('keydown', function(e) 
+          {  // Toggle the menu when RETURN is pressed
+            if(e.keyCode && e.keyCode == 13) {toggleMenu(document.getElementById('example-button-menu'));}
+          });
+          <br><br>buttonExample.addEventListener('click', function(e) {// Toggle the menu on mouse click
+            toggleMenu(document.getElementById('example-button-menu'));
+          });   
+        </code>
+      </p>
+      <p>Write Code that Adapts to the User's Technology</p><p>Purpose: </p>To have a website that reader can browse from any device, or can respond in a user friendly way to different user environments.
+      <p>How: Use responsive design to adapt the display to different zoom states and viewport sizes, such as on mobile devices and tablet.<br><br>Code Example:<br>    
+        <code>/* On narrow viewports, make the navigation full width */<br>
+          @media screen and (min-width: 25em) {
+            #nav {
+              float: none;
+              width: auto;
+            }
+            #main {
+              margin-left: 0;
+            }
+          }     
+        </code>
+      </p>
+    </section>    
+      
+    <section class="main-section" id="Legal_Guidelines">
+      <header>Legal Guidelines</header>
+      <p>There are numerous checklists and sets of guidelines available for basing accessibility tests on.   For a beginner in Web Design Accessibility, you should familiarize yourself with the basic areas in which you need to take care, as well as understanding the high-level structures of the guidelines that are most relevant to you.</p>
+      <p>Two places of information that will be essential for anyone working with accessibility in web design are:
+        <ul>
+          <li>Web Content Accesibility Guidelines (WCAG)</li>
+          <p>The WCAG is a large and very detailed document that includes very precise, technology-agnostic criteria for accessibility conformance. The criteria are split up into four main categories, which specify how implementations can be made perceivable, operable, understandable, and robust. There is no need to learn all of the WCAG criteria — be aware of the major areas of concern, and use a variety of techniques and tools to highlight any areas that don't conform to the WCAG criteria.</p>
+          <li>Country Specific Regulation and Laws</li>
+          <p>Countries may have specific legislation governing the need for websites serving their population to be accessible. The W3C (World Wide Web Consortium) keeps a list of Web Accessibility Laws & Policies by country. Here a few examples of countries with legal guidelines regarding accessibility:</p>
+            <ul>
+              <li>United Kingdom - Accessibility Regulations 2018</li>
+              <li>United States - Section 508 of the Rehabilitation Act</li>
+              <li>Australia - Disability Discrimination Act</li>
+            </ul>
+        </ul>
+    </section>    
+    
+    <section class="main-section" id="Accessibility_APIs">
+      <header>Accessibility APIs</header>
+      <p>Web browsers make use of special accessibility APIs (provided by the underlying operating system) that expose information useful for assistive technologies (ATs) — ATs mostly tend to make use of semantic information, so this information doesn't include things like styling information, or JavaScript. This information is structured in a tree of information called the accessibility tree.</p>
+      <p>Different operating systems have different accessibility APIs available :</p>
+      <ul>
+        <li>Windows: MSAA/IAccessible, UIAExpress, IAccessible2</li>
+        <li>Mac OS X: NSAccessibility</li>
+        <li>Linux: AT-SPI</li>
+        <li>Android: Accessibility framework</li>
+        <li>iOS: UIAccessibility</li>
+      </ul>
+      <p>Where the native semantic information provided by the HTML elements in your web apps falls down, you can supplement it with features from the WAI-ARIA specification, which add semantic information to the accessibility tree to improve accessibility. You can learn a lot more about WAI-ARIA in our WAI-ARIA basics article.</p>
+    </section>   
+
+    <section class="main-section" id="References">
+      <header>References</header>
+      <p>Documentation on this page is taken from</p>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">MDN</a> and the <a href="https://www.w3.org/WAI/tips/developing/#write-code-that-adapts-to-the-users-technology">W3G Accessibility Initiative</a>
+    </section>
+
+  </main>  
+</body>
+</html>
