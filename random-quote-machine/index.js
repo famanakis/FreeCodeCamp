@@ -5,6 +5,6 @@ const api = fetch("https://type.fit/api/quotes")
     return response.json();
   })
   .then(function(data) {
-    console.log(data);
+    console.log(data[0].text, data[0].author);
   });
 
