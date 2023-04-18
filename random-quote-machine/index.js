@@ -8,4 +8,3 @@ const api = fetch("https://type.fit/api/quotes")
     console.log(data);
   });
 
-  console.log(api)
